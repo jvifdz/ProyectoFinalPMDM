@@ -1,10 +1,9 @@
 package com.example.proyectofinalpmdm;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
+import android.view.*;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -78,6 +77,29 @@ public class ListadoCochesAct extends AppCompatActivity {
         dbInterface.cierra();
 
     }
+
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v,
+                                    ContextMenu.ContextMenuInfo menuInfo){
+        Activity activity = (Activity ) v.getContext();
+        MenuInflater inflater = activity.getMenuInflater();
+        inflater.inflate(R.menu.contextual, menu);
+    }
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item){
+        switch(item.getItemId()){
+            case R.id.menuBorrar:
+                dbInterface.borrarCoche(misFilas.get(posicionLongClick).getId());
+                misFilas.remove(posicionLongClick);
+
+                adaptador.notifyDataSetChanged();
+
+        }
+        return super.onContextItemSelected(item);
+    }
+
 
 
     @Override
