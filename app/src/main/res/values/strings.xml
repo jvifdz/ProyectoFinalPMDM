@@ -1,6 +1,8 @@
 <resources>
+
     <string name="app_name">ProyectoFinalPMDM</string>
     <string name="iniciar">INICIAR</string>
+    //actividad insertar
     <string name="titulo">Inserccion del Automovil</string>
     <string name="marca">Marca</string>
     <string name="modelo">Modelo</string>
@@ -9,4 +11,10 @@
     <string name="turismo">Turismo</string>
     <string name="cuatro">4x4</string>
     <string name="anadir">Añadir</string>
+    //actividad listar
+    <string name="listado">Listado de coches</string>
+    //fila
+    <string name="tipo">Tipo de coche</string>
+    //contextual
+    <string name="borrar">Borrar</string>
 </resources>
