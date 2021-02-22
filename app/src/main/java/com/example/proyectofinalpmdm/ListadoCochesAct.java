@@ -96,6 +96,15 @@ public class ListadoCochesAct extends AppCompatActivity {
 
                 adaptador.notifyDataSetChanged();
 
+            case   R.id.menuModificar:
+                Intent intent = new Intent(this,ModificarBBDD.class);
+                intent.putExtra("id",misFilas.get(posicionLongClick).getId());
+                intent.putExtra("marca",misFilas.get(posicionLongClick).getMarca());
+
+
+                startActivity(intent);
+                break;
+
         }
         return super.onContextItemSelected(item);
     }

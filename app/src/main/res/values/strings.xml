@@ -17,4 +17,5 @@
     <string name="tipo">Tipo de coche</string>
     //contextual
     <string name="borrar">Borrar</string>
+    <string name="modificar">Modificar</string>
 </resources>
